@@ -1,6 +1,10 @@
 # dotfiles
 * neovim
 * zsh / ohmyzsh
+    * jetbrainsmono nerdfont
+    * powerline10k ohmyzsh theme
+* hyper
+
 
 ## install zsh
 sudo apt update
