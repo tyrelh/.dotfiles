@@ -296,13 +296,13 @@ font_size 14.0
 
 #: The thickness of the underline cursor (in pts).
 
-cursor_blink_interval 0
+# cursor_blink_interval -1
 
 #: The interval to blink the cursor (in seconds). Set to zero to
 #: disable blinking. Negative values mean use system default. Note
 #: that the minimum interval will be limited to repaint_delay.
 
-# cursor_stop_blinking_after 5.0
+# cursor_stop_blinking_after 15.0
 
 #: Stop blinking cursor after the specified number of seconds of
 #: keyboard inactivity. Set to zero to never stop blinking.
@@ -2530,7 +2530,7 @@ hide_window_decorations titlebar-only
 
 
 # BEGIN_KITTY_THEME
-# Catppuccin-Macchiato
+# Catppuccin-Latte
 include current-theme.conf
 # END_KITTY_THEME
 
