@@ -135,6 +135,7 @@ complete -o nospace -C /opt/homebrew/bin/terraform terraform
 alias ls=lsd
 alias lst='lsd -A --tree --depth 4'
 alias lsa='lsd -1A'
+alias n=nvim
 
 # kitty theme switcher
 function kt() {
