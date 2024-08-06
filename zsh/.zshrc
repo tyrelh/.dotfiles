@@ -136,6 +136,7 @@ alias ls=lsd
 alias lst='lsd -A --tree --depth 4'
 alias lsa='lsd -1A'
 alias n=nvim
+alias vv='cd ~/.config/nvim && nvim'
 
 # kitty theme switcher
 function kt() {
@@ -151,6 +152,7 @@ function kt() {
 # yazi wrapper
 # when exiting yazi this sets your terminal to the directory yazi was in
 function yy() {
+  echo "Yazi"
   local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
   yazi "$@" --cwd-file="$tmp"
   if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
