@@ -137,6 +137,7 @@ alias lst='lsd -A --tree --depth 4'
 alias lsa='lsd -1A'
 alias n=nvim
 alias vv='cd ~/.config/nvim && nvim'
+alias c=zoxide
 
 # kitty theme switcher
 function kt() {
@@ -175,3 +176,5 @@ function dd() {
   nvim
 }
 
+source <(fzf --zsh)
+eval "$(zoxide init zsh)"
