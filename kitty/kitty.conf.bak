@@ -296,13 +296,13 @@ font_size 14.0
 
 #: The thickness of the underline cursor (in pts).
 
-# cursor_blink_interval -1
+cursor_blink_interval 0
 
 #: The interval to blink the cursor (in seconds). Set to zero to
 #: disable blinking. Negative values mean use system default. Note
 #: that the minimum interval will be limited to repaint_delay.
 
-# cursor_stop_blinking_after 15.0
+# cursor_stop_blinking_after 5.0
 
 #: Stop blinking cursor after the specified number of seconds of
 #: keyboard inactivity. Set to zero to never stop blinking.
@@ -833,7 +833,7 @@ font_size 14.0
 #: that setting a non-zero window_margin_width overrides this and
 #: causes all borders to be drawn.
 
-window_margin_width 10 20
+window_margin_width 0 10
 
 #: The window margin (in pts) (blank area outside the border). A
 #: single value sets all four sides. Two values set the vertical and
