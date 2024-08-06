@@ -165,3 +165,11 @@ function oo() {
   cd ~/Notes/
   nvim
 }
+
+# dotfiles wrapper
+function dd() {
+  echo "Dotfiles"
+  cd ~/.dotfiles/
+  nvim
+}
+
