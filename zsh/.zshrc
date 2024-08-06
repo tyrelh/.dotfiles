@@ -158,3 +158,10 @@ function yy() {
   fi
   rm -f -- "$tmp"
 }
+
+# obsidian wrapper
+function oo() {
+  echo "Obsidian"
+  cd ~/Notes/
+  nvim
+}
