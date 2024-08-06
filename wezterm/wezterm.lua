@@ -1,5 +1,6 @@
 local wezterm = require("wezterm")
 
+-- https://wezfurlong.org/wezterm/config/lua/wezterm.gui/get_appearance.html
 function get_appearance()
 	if wezterm.gui then
 		return wezterm.gui.get_appearance()
