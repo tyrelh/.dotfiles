@@ -151,5 +151,9 @@ function dd() {
   nvim
 }
 
+function printpath() {
+  echo -e ${PATH//:/'\n'}
+}
+
 source <(fzf --zsh)
 eval "$(zoxide init zsh)"
