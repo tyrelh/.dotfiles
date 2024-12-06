@@ -151,6 +151,14 @@ function dd() {
   nvim
 }
 
+# vscode wrapper
+function cc() {
+  echo "Zoxide cd to $1"
+  z $1
+  echo "VSCode cwd"
+  code .
+}
+
 function printpath() {
   echo -e ${PATH//:/'\n'}
 }
