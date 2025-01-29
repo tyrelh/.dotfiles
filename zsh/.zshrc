@@ -101,10 +101,13 @@ export NODE_OPTIONS="--max-old-space-size=8192" # This prevents the issue of run
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Cloudflare
 export PATH="$PATH:/opt/cloudflared"
 
 # go path
-export PATH="$PATH:/Users/tyrel/go/bin"
+export GOPATH="$HOME/go"
+export PATH=$PATH:$GOPATH/bin
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
