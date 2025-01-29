@@ -1,0 +1,38 @@
+add_newline = true
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$fill\
+$python\
+$nodejs\
+$golang\
+$zig\
+$java\
+$gradle\
+$terraform\
+$docker_context\
+$kubernetes\
+$azure\
+$aws\
+$jobs\
+$cmd_duration\
+$line_break\
+$character"""
+
+[git_branch]
+symbol = ' '
+
+[fill]
+symbol = ' '
+
+[character]
+success_symbol = '[](bold green) '
+error_symbol = '[ ](bold red) '
+
+[golang]
+symbol = 'go '
+
+[aws]
+symbol = ' '
