@@ -24,6 +24,7 @@ config = {
 	enable_tab_bar = false,
 	window_decorations = "RESIZE", -- disable title bar
 	color_scheme = scheme_for_appearance(get_appearance()),
+	font = wezterm.font("JetBrainsMono Nerd Font"),
 	font_size = 16.0,
 	line_height = 0.9,
 	window_padding = {
