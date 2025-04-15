@@ -61,6 +61,8 @@
       "!Not sequence",
       "!GetAZs",
       "!GetAZs sequence",
+      "!If",
+      "!If sequence",
     ],
     "workbench.editor.tabSizing": "shrink",
     "workbench.editor.wrapTabs": true,
