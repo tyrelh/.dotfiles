@@ -93,7 +93,6 @@ export STARSHIP_CONFIG="$HOME/.config/starship.toml"
 eval "$(starship init zsh)"
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-echo "Oh hai 👋🏻"
 # postgres
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 function vhs() {
@@ -101,3 +100,4 @@ function vhs() {
   docker run --rm -v $PWD:/vhs ghcr.io/charmbracelet/vhs "$@"
 }
 
+echo "Oh hi 👋"
