@@ -94,3 +94,5 @@ eval "$(starship init zsh)"
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 echo "Oh hai 👋🏻"
+# postgres
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
