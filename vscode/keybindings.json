@@ -29,5 +29,9 @@
         "key": "ctrl+-",
         "command": "-workbench.action.navigateBack",
         "when": "canNavigateBack"
+    },
+    {
+        "key": "cmd+i",
+        "command": "composerMode.agent"
     }
 ]
