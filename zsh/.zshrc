@@ -96,3 +96,8 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 echo "Oh hai 👋🏻"
 # postgres
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+function vhs() {
+  echo "Using Docker image for VHS to generate gif"
+  docker run --rm -v $PWD:/vhs ghcr.io/charmbracelet/vhs "$@"
+}
+
