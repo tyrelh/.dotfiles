@@ -35,7 +35,8 @@ alias lst='lsd -A --tree --depth 4'
 alias lsa='lsd -1A'
 alias n=nvim
 alias vv='cd ~/.config/nvim && nvim'
-alias c=zoxide
+alias c=cursor
+alias cc='cursor .'
 
 # kitty theme switcher
 function kt() {
@@ -95,9 +96,10 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # postgres
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
-function vhs() {
-  echo "Using Docker image for VHS to generate gif"
-  docker run --rm -v $PWD:/vhs ghcr.io/charmbracelet/vhs "$@"
-}
+
+# function vhs() {
+#   echo "Using Docker image for VHS to generate gif"
+#   docker run --rm -v $PWD:/vhs ghcr.io/charmbracelet/vhs "$@"
+# }
 
 echo "Oh hi 👋"
