@@ -49,31 +49,12 @@ function kt() {
   kitty +kitten themes --reload-in=all $theme
 }
 
-# yazi wrapper
-# when exiting yazi this sets your terminal to the directory yazi was in
-# function yy() {
-#   echo "Yazi"
-#   local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
-#   yazi "$@" --cwd-file="$tmp"
-#   if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-#     builtin cd -- "$cwd"
-#   fi
-#   rm -f -- "$tmp"
-# }
-
 # obsidian wrapper
 function oo() {
   echo "Obsidian"
   cd ~/Notes/
   nvim
 }
-
-# dotfiles wrapper
-# function dd() {
-#   echo "Dotfiles"
-#   cd ~/.dotfiles/
-#   nvim
-# }
 
 # vscode wrapper
 function cc() {
