@@ -37,6 +37,8 @@ alias n=nvim
 alias vv='cd ~/.config/nvim && nvim'
 alias c=cursor
 alias cc='cursor .'
+alias pip=pip3
+alias python=python3
 
 # kitty theme switcher
 function kt() {
