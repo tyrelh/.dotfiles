@@ -26,6 +26,11 @@ export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
 export PATH="$PATH:$GOPATH/bin"
 
+# python
+alias pip=pip3
+alias python=python3
+export PATH="${PATH}:/Users/tyrel/Library/Python/3.9/bin"
+
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
@@ -37,8 +42,6 @@ alias n=nvim
 alias vv='cd ~/.config/nvim && nvim'
 alias c=cursor
 alias cc='cursor .'
-alias pip=pip3
-alias python=python3
 
 # kitty theme switcher
 function kt() {
