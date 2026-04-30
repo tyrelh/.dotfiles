@@ -1,1 +1,1 @@
-ln wezterm.lua ~/.wezterm.lua
+ln -s wezterm.lua ~/.wezterm.lua

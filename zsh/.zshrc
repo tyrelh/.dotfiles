@@ -84,6 +84,14 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # postgres
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
+# ngrok
+export NGROK_AUTHTOKEN=2x0gKHCD9o4HL2ME7gYMXAKVYiB_5yJdKmDrBcyx37zKdyMVq
+
+# shortcut
+export SHORTCUT_API_TOKEN="sct_rw_giftbit_NWRmOTcwNjctNzhkZC00MTdkLWE3MDctMWYzOWU2MmRkYTY1OjYwOTE2YjM3LWYwNzAtNDhiYy04Y2E2LThmZjllYzBkZmFjZToxNDdmMjg0NzRjZjU1OTM2YmQ0OTM1OTg2ZDU2MDI5YQ"
+
+export DD_API_KEY="a7f40f706b81268fcc15f3fbe3b40945"
+
 # function vhs() {
 #   echo "Using Docker image for VHS to generate gif"
 #   docker run --rm -v $PWD:/vhs ghcr.io/charmbracelet/vhs "$@"
