@@ -42,6 +42,7 @@ alias n=nvim
 alias vv='cd ~/.config/nvim && nvim'
 alias c=cursor
 alias cc='cursor .'
+alias zz='zed .'
 
 # kitty theme switcher
 function kt() {
