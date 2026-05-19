@@ -1,11 +1,11 @@
 mv ~/.zshrc ~/.zshrc.bak
-ln .zshrc ~/.zshrc
+ln -s .zshrc ~/.zshrc
 
 mv ~/.zprofile ~/.zprofile.bak
-ln .zprofile ~/.zprofile
+ln -s .zprofile ~/.zprofile
 
 brew install starship
 mv ~/.config/starship.toml ~/.config/starship.toml.bak
-ln starship.toml ~/.config/starship.toml
+ln -s starship.toml ~/.config/starship.toml
 
 brew install zsh-autosuggestions
