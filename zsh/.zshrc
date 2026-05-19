@@ -94,6 +94,6 @@ export PATH="$PATH:/Users/tyrel/.lmstudio/bin"
 # End of LM Studio CLI section
 
 # secrets
-source "$(dirname "${(%):-%x}")/.env"
+source "${${(%):-%x}:A:h}/.env"
 
 echo "Oh hi 👋"
