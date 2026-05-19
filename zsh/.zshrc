@@ -84,9 +84,6 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # postgres
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
-# secrets
-source "$(dirname "${(%):-%x}")/.env"
-
 # function vhs() {
 #   echo "Using Docker image for VHS to generate gif"
 #   docker run --rm -v $PWD:/vhs ghcr.io/charmbracelet/vhs "$@"
@@ -95,5 +92,8 @@ source "$(dirname "${(%):-%x}")/.env"
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/tyrel/.lmstudio/bin"
 # End of LM Studio CLI section
+
+# secrets
+source "$(dirname "${(%):-%x}")/.env"
 
 echo "Oh hi 👋"
