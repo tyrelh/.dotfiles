@@ -40,7 +40,7 @@ alias lst='lsd -A --tree --depth 4'
 alias lsa='lsd -1A'
 alias n=nvim
 alias vv='cd ~/.config/nvim && nvim'
-alias cc='cursor .'
+alias cc='claude --dangerously-skip-permissions'
 alias zz='zed .'
 
 # kitty theme switcher
