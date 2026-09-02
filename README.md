@@ -28,9 +28,8 @@ echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 
 ```shell
 rm ~/.zshrc
-ln -s .zshrc ~/.zshrc
-mkdir ~/.config
-mkdir ~/.config/nvim
-ln -s .config/nvim/init.vim ~/.config/nvim/init.vim
-ls -s .config/nvim/ultisnips ~/.config/nvim/ultisnips
+ln -s "$HOME/.dotfiles/zsh/.zshrc" ~/.zshrc
+mkdir -p ~/.config/nvim
+ln -s "$HOME/.dotfiles/.config/nvim/init.vim" ~/.config/nvim/init.vim
+ln -s "$HOME/.dotfiles/.config/nvim/ultisnips" ~/.config/nvim/ultisnips
 ```

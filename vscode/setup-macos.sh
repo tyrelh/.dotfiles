@@ -1,15 +1,15 @@
 #! /usr/bin/env bash
+# mv only files that are actually there: an existing config dir with just one
+# of the two files made the old unconditional mv fail.
+DOTFILES_DIR="$HOME/.dotfiles/vscode"
 CONFIG_DIR="$HOME/Library/Application Support/Code/User"
 
-if [ -d "$CONFIG_DIR" ]; then
-    mv "$CONFIG_DIR/keybindings.json" "$CONFIG_DIR/keybindings.json.bak"
-    mv "$CONFIG_DIR/settings.json" "$CONFIG_DIR/settings.json.bak"
-    echo "Backed up existing keybindings.json and settings.json to keybindings.json.bak and settings.json.bak"
-else
-    mkdir -p "$CONFIG_DIR"
-    echo "Created $CONFIG_DIR"
-fi
-
-ln -s "$HOME/.dotfiles/vscode/keybindings.json" "$CONFIG_DIR/keybindings.json"
-ln -s "$HOME/.dotfiles/vscode/settings.json" "$CONFIG_DIR/settings.json"
-echo "Linked keybindings.json and settings.json from dotfiles repo to $CONFIG_DIR"
+mkdir -p "$CONFIG_DIR"
+for FILE in keybindings.json settings.json; do
+    if [ -e "$CONFIG_DIR/$FILE" ] || [ -L "$CONFIG_DIR/$FILE" ]; then
+        echo "backing up existing $CONFIG_DIR/$FILE"
+        mv "$CONFIG_DIR/$FILE" "$CONFIG_DIR/$FILE.bak"
+    fi
+    echo "linking $DOTFILES_DIR/$FILE to $CONFIG_DIR/$FILE"
+    ln -s "$DOTFILES_DIR/$FILE" "$CONFIG_DIR/$FILE"
+done
