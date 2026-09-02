@@ -40,8 +40,7 @@ alias lst='lsd -A --tree --depth 4'
 alias lsa='lsd -1A'
 alias n=nvim
 alias vv='cd ~/.config/nvim && nvim'
-alias c=cursor
-alias cc='cursor .'
+alias cc='claude --dangerously-skip-permissions'
 alias zz='zed .'
 
 # kitty theme switcher
@@ -53,21 +52,6 @@ function kt() {
   echo "Switching to $theme"
   # kitty @ set-colors -a -c ~/.config/kitty/themes/$theme.conf
   kitty +kitten themes --reload-in=all $theme
-}
-
-# obsidian wrapper
-function oo() {
-  echo "Obsidian"
-  cd ~/Notes/
-  nvim
-}
-
-# vscode wrapper
-function cc() {
-  echo "Zoxide cd to $1"
-  z $1
-  echo "VSCode cwd"
-  code .
 }
 
 function printpath() {
@@ -100,5 +84,8 @@ export DD_API_KEY="###"
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/tyrel/.lmstudio/bin"
 # End of LM Studio CLI section
+
+# secrets
+source "${${(%):-%x}:A:h}/.env"
 
 echo "Oh hi 👋"
