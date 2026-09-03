@@ -89,3 +89,13 @@ export PATH="$PATH:/Users/tyrel/.lmstudio/bin"
 source "${${(%):-%x}:A:h}/.env"
 
 echo "Oh hi 👋"
+
+# launch herdr and start claude (cc alias) in the first agent-free pane
+function hc() {
+  (
+    until herdr pane list >/dev/null 2>&1; do sleep 0.3; done
+    p=$(herdr pane list | jq -r '.result.panes[] | select(.agent==null) | .pane_id' | head -1)
+    [[ -n $p ]] && herdr pane run "$p" cc >/dev/null
+  ) &!
+  herdr "$@"
+}
