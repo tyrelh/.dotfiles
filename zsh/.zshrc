@@ -99,3 +99,6 @@ function hc() {
   ) &!
   herdr "$@"
 }
+
+# Added by cua-driver-rs installer — see https://github.com/trycua/cua
+export PATH="/Users/tyrel/.local/bin:$PATH"
