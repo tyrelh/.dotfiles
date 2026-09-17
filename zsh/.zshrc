@@ -40,7 +40,7 @@ alias lst='lsd -A --tree --depth 4'
 alias lsa='lsd -1A'
 alias n=nvim
 alias vv='cd ~/.config/nvim && nvim'
-alias cc='claude --dangerously-skip-permissions'
+alias cc='echo "Checking for claude-code updates..." && brew upgrade claude-code@latest && echo "Launching claude code..." && claude --dangerously-skip-permissions && echo "Claude exited $?."'
 alias zz='zed .'
 
 # kitty theme switcher
