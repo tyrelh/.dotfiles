@@ -7,9 +7,8 @@ plugins=(
 
 
 # Java
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/amazon-corretto-11.jdk/Contents/Home
+export JAVA_HOME=$(/usr/libexec/java_home -v 17)
 export JDK_HOME=$JAVA_HOME
-export JRE_HOME=$JAVA_HOME/jre
 export _JAVA_OPTIONS="-Xms512m -Xmx4096m"
 
 # Node
@@ -42,6 +41,7 @@ alias n=nvim
 alias vv='cd ~/.config/nvim && nvim'
 alias cc='echo "Checking for claude-code updates..." && brew upgrade claude-code@latest && echo "Launching claude code..." && claude --dangerously-skip-permissions && echo "Claude exited $?."'
 alias zz='zed .'
+alias code='echo "Checking for codex updates..." && brew upgrade --cask codex && echo "Launching codex..." && codex && echo "Codex exited $?."'
 
 # kitty theme switcher
 function kt() {

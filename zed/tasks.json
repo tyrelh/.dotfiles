@@ -1,0 +1,27 @@
+// Global Zed tasks. Tasks tagged "agents" all spawn from one keybinding (see keymap.json).
+[
+  {
+    "label": "codex",
+    "command": "codex",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "tags": ["agents"],
+    "use_new_terminal": true,
+    "reveal": "no_focus",
+  },
+  {
+    "label": "claude",
+    "command": "claude",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "tags": ["agents"],
+    "use_new_terminal": true,
+    "reveal": "no_focus",
+  },
+  {
+    "label": "shell",
+    "command": "zsh",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "tags": ["agents"],
+    "use_new_terminal": true,
+    "reveal": "always",
+  },
+]
