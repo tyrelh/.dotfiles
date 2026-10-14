@@ -7,9 +7,12 @@ plugins=(
 
 
 # Java
-export JAVA_HOME=$(/usr/libexec/java_home -v 17)
-export JDK_HOME=$JAVA_HOME
-export _JAVA_OPTIONS="-Xms512m -Xmx4096m"
+# only set up if a JDK 17 is installed
+if /usr/libexec/java_home -v 17 &>/dev/null; then
+  export JAVA_HOME=$(/usr/libexec/java_home -v 17)
+  export JDK_HOME=$JAVA_HOME
+  export _JAVA_OPTIONS="-Xms512m -Xmx4096m"
+fi
 
 # Node
 # export NODE_OPTIONS="--max-old-space-size=8192" # This prevents the issue of running out of memory for nodeJS.
