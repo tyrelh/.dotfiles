@@ -33,7 +33,11 @@ alias pip=pip3
 alias python=python3
 export PATH="${PATH}:/Users/tyrel/Library/Python/3.9/bin"
 
+# start zsh's completion system (provides compdef)
+autoload -Uz compinit && compinit
+# let zsh use bash-style completion scripts
 autoload -U +X bashcompinit && bashcompinit
+# tab completion for terraform
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
 # alias vim=nvim
